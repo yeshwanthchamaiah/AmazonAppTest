@@ -13,12 +13,12 @@ public class Listeners implements ITestListener{
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		System.out.println(result.getTestName() + " Started");
+		
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		System.out.println(result.getTestName() + " Completed");
+		
 	}
 
 	@Override
@@ -30,7 +30,6 @@ public class Listeners implements ITestListener{
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -41,12 +40,12 @@ public class Listeners implements ITestListener{
 
 	@Override
 	public void onStart(ITestContext context) {
-		System.out.println(context.getName() + " Started");
+		
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		System.out.println(context.getName() + " Finished");
+		
 	}
 	
 	

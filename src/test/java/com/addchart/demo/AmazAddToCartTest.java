@@ -25,6 +25,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.touch.TouchActions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -53,16 +54,13 @@ public class AmazAddToCartTest extends Base{
 
 	@Test(testName="Add To Cart", dataProvider = "LoginUser",dataProviderClass = TestData.class)
 	public void doLogin(String userID,String pwd) throws IOException {
+		
 		try {
 			if(this.loginCheck(driver,userID,pwd))
 			{
 				//search items
-				Thread.sleep(2000);
 				driver.findElementByClassName("android.widget.ImageView").click();
 				driver.findElementByXPath("//android.widget.TextView[@text='Home']").click();
-
-
-				Thread.sleep(2000);
 				driver.findElementById("com.amazon.mShop.android.shopping:id/rs_search_src_text").sendKeys("Almond 1kg");		
 				driver.pressKey(new KeyEvent(AndroidKey.ENTER));		
 
@@ -76,7 +74,6 @@ public class AmazAddToCartTest extends Base{
 				String expSeller="by Miltop";
 				String actSellet=driver.findElementByXPath("//android.view.View[@text='by Miltop']").getText();		
 				Assert.assertEquals(expSeller, actSellet); 
-
 			}
 
 			else
@@ -88,17 +85,10 @@ public class AmazAddToCartTest extends Base{
 		}
 
 	}
-
-
 	@AfterTest 
 	public void tearDown(){
 		if(driver!=null) {
 			driver.quit();
 		}
 	}
-
-
 }
-
-
-

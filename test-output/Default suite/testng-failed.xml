@@ -7,6 +7,7 @@
         <methods>
           <include name="changeCountrySetting"/>
           <include name="screenRotationCheck" invocation-numbers="0"/>
+          <include name="doLogin" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="addToCart"/>
           <include name="setUp"/>

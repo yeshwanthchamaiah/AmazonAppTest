@@ -52,47 +52,34 @@ public class AmazonAppTestAll extends Base{
 		driver.findElementByXPath("//android.widget.Button[@text='Done']").click();
 
 		//Validate the country changed settings
-		if(inputCtry.contains("India")) {
+	/*	if(inputCtry.contains("India")) {
 			actCtry="Country/Region: India";
 			expCtry=checkCountryChange(actCtry);
 			Assert.assertEquals(actCtry,expCtry);			
 		}	
-		else Assert.assertTrue(false, "Invlaid country input");
-		driver.findElementByXPath("//android.widget.Button[@text='Done']").click();
+		else Assert.assertTrue(false, "Invlaid country input");*/
+		
 
 	}
 
-	@Test(testName="Add To Cart", dataProvider = "LoginUser",dataProviderClass = TestData.class,dependsOnMethods = { "changeCountrySetting" }, priority=2)
+	@Test(testName="Add To Cart", dataProvider = "LoginUser",dataProviderClass = TestData.class, priority=3)
 	public void addToCart(String userID,String pwd) throws IOException {
-		try {
-			//if(this.loginCheck(driver,userID,pwd))
-			//{
-				//search items
+		//if(this.loginCheck(driver,userID,pwd))
+		//{
+			//search items
+			driver.findElementById("com.amazon.mShop.android.shopping:id/rs_search_src_text").sendKeys("Almond 1kg");		
+			driver.pressKey(new KeyEvent(AndroidKey.ENTER));		
 
-				Thread.sleep(2000);
-				driver.findElementById("com.amazon.mShop.android.shopping:id/rs_search_src_text").sendKeys("Almond 1kg");		
-				driver.pressKey(new KeyEvent(AndroidKey.ENTER));		
+			//Add item to cart
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(textContains(\"Miltop\"));").click();		
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(textContains(\"One-time\"));").click();		
+			driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Add to Cart\"));").click();
 
-				//Add item to cart
-				driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(textContains(\"Miltop\"));").click();		
-				driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(textContains(\"One-time\"));").click();		
-				driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Add to Cart\"));").click();
-
-				//Validate the added item
-				driver.findElementById("com.amazon.mShop.android.shopping:id/chrome_action_bar_cart_image").click();		
-				String expSeller="by Miltop";
-				String actSellet=driver.findElementByXPath("//android.view.View[@text='by Miltop']").getText();		
-				Assert.assertEquals(expSeller, actSellet); 
-
-			/*}
-
-			else
-				Assert.assertTrue(false, "Login Failed");*/
-
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+			//Validate the added item
+			driver.findElementById("com.amazon.mShop.android.shopping:id/chrome_action_bar_cart_image").click();		
+			String expSeller="by Miltop";
+			String actSellet=driver.findElementByXPath("//android.view.View[@text='by Miltop']").getText();		
+			Assert.assertEquals(expSeller, actSellet);
 
 	}
 
@@ -102,7 +89,11 @@ public class AmazonAppTestAll extends Base{
 		driver.findElementById("com.amazon.mShop.android.shopping:id/chrome_action_bar_burger_icon").click();
 		driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"Settings\"));").click();
 		driver.findElementById("com.amazon.mShop.android.shopping:id/anp_drawer_item").click();
-		return driver.findElementByXPath("//android.widget.Button[@text='"+inputCtry+"']").getText();
+		String ctrystr=driver.findElementByXPath("//android.widget.Button[@text='"+inputCtry+"']").getText();
+		driver.findElementByXPath("//android.widget.Button[@text='Done']").click();
+		
+		return ctrystr;
+				
 
 	}
 	

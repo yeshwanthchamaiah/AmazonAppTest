@@ -39,10 +39,10 @@ public abstract class Base {
 			//cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Device"); //Real Device
 			
 			cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"uiautomator2");
-			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,60);
+			cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT,40);
 			cap.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
 			driver=new AndroidDriver<AndroidElement>(new URL("http://127.0.0.1:4723/wd/hub"), cap);
-			driver.manage().timeouts().implicitlyWait(99, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		} catch (FileNotFoundException e) {
 			System.out.println("Error while reading Config File");
 			e.printStackTrace();

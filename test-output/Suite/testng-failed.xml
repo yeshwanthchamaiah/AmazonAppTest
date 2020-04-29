@@ -7,13 +7,16 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.addchart.demo.AmazChgCountryTest2">
+      <class name="com.addchart.demo.AmazonAppTestAll">
         <methods>
           <include name="changeCountrySetting"/>
-          <include name="setUp"/>
+          <include name="screenRotationCheck" invocation-numbers="0"/>
+          <include name="doLogin" invocation-numbers="0"/>
           <include name="tearDown"/>
+          <include name="addToCart" invocation-numbers="0"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- com.addchart.demo.AmazChgCountryTest2 -->
+      </class> <!-- com.addchart.demo.AmazonAppTestAll -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

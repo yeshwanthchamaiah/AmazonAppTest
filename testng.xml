@@ -6,6 +6,7 @@
 	<listener class-name="resources.ExtentReporterNG"/>
 </listeners>
  <test name="Test">
+ 
     <classes>
     	<class name="com.addchart.demo.AmazonAppTestAll"/>
     	<!-- <class name="com.addchart.demo.AmazLoginTest"/>
@@ -13,6 +14,6 @@
 		<class name="com.addchart.demo.AmazChgCountryTest"/>
 		<class name="com.addchart.demo.ScnRotationTest"/>-->
     </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-
