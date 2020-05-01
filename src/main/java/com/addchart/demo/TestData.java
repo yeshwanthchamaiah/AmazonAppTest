@@ -20,8 +20,8 @@ public class TestData {
         public static Object[][] getDataFromDataprovider(){
         	Object[][] data = new Object[1][2];
 
-        	data[0][0] ="yeshwanth.c@gmail.com";
-        	data[0][1] = "amazon@123";
+        	data[0][0] ="dillipsahoo46@gmail.com";
+        	data[0][1] = "Sahoo@1";
         	
         	return data;
         }

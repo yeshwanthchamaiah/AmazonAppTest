@@ -80,7 +80,7 @@ public abstract class Base {
 		driver.findElementById("com.amazon.mShop.android.shopping:id/chrome_action_bar_burger_icon").click();
 		String loginUser = driver.findElementByClassName("android.widget.TextView").getText();
 		driver.findElementByXPath("//android.widget.TextView[@text='Home']").click();
-		return loginUser.contains("Yeshwanth");
+		return loginUser.contains("Dillip");
 	}
 	
 	

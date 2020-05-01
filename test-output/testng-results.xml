@@ -1,73 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="227722" started-at="2020-04-29T18:18:02 IST" finished-at="2020-04-29T18:21:50 IST">
+  <suite name="Default suite" duration-ms="92" started-at="2020-04-30T12:37:04 IST" finished-at="2020-04-30T12:37:04 IST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="227722" started-at="2020-04-29T18:18:02 IST" finished-at="2020-04-29T18:21:50 IST">
-      <class name="com.addchart.demo.AmazonAppTestAll">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="setUp" is-config="true" duration-ms="47358" started-at="2020-04-29T18:18:02 IST" finished-at="2020-04-29T18:18:50 IST">
+    <test name="Default test" duration-ms="92" started-at="2020-04-30T12:37:04 IST" finished-at="2020-04-30T12:37:04 IST">
+      <class name="com.addchart.demo.Test1">
+        <test-method status="PASS" signature="testMethod()[pri:0, instance:com.addchart.demo.Test1@53f65459]" name="testMethod" duration-ms="45" started-at="2020-04-30T12:37:04 IST" finished-at="2020-04-30T12:37:04 IST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="doLogin(java.lang.String, java.lang.String)[pri:1, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="doLogin" duration-ms="38223" started-at="2020-04-29T18:18:50 IST" data-provider="LoginUser" finished-at="2020-04-29T18:19:28 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yeshwanth.c@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[amazon@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- doLogin -->
-        <test-method status="PASS" signature="changeCountrySetting()[pri:2, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="changeCountrySetting" duration-ms="32565" started-at="2020-04-29T18:19:28 IST" finished-at="2020-04-29T18:20:01 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changeCountrySetting -->
-        <test-method status="PASS" signature="addToCart(java.lang.String, java.lang.String)[pri:3, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="addToCart" duration-ms="69514" started-at="2020-04-29T18:20:01 IST" data-provider="LoginUser" finished-at="2020-04-29T18:21:10 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yeshwanth.c@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[amazon@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addToCart -->
-        <test-method status="PASS" signature="screenRotationCheck(java.lang.String, java.lang.String)[pri:4, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="screenRotationCheck" duration-ms="38681" started-at="2020-04-29T18:21:10 IST" data-provider="LoginUser" finished-at="2020-04-29T18:21:49 IST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[yeshwanth.c@gmail.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[amazon@123]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- screenRotationCheck -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.addchart.demo.AmazonAppTestAll@38e79ae3]" name="tearDown" is-config="true" duration-ms="1257" started-at="2020-04-29T18:21:49 IST" finished-at="2020-04-29T18:21:50 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.addchart.demo.AmazonAppTestAll -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- testMethod -->
+      </class> <!-- com.addchart.demo.Test1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

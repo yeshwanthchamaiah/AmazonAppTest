@@ -21,7 +21,7 @@ public class AmazonAppTestAll extends Base{
 		driver = this.getDriver("ApkFile");
 	}
 	
-	@Test(testName="Login Test", dataProvider = "LoginUser",dataProviderClass = TestData.class, priority=1)
+	@Test(dataProvider = "LoginUser",dataProviderClass = TestData.class, priority=1)
 	public void doLogin(String userID,String pwd) {
 		try {
 			if(this.loginCheck(driver,userID,pwd))
@@ -62,7 +62,7 @@ public class AmazonAppTestAll extends Base{
 
 	}
 
-	@Test(testName="Add To Cart", dataProvider = "LoginUser",dataProviderClass = TestData.class, priority=3)
+	@Test(priority=3)
 	public void addToCart(String userID,String pwd) throws IOException {
 		//if(this.loginCheck(driver,userID,pwd))
 		//{
@@ -97,7 +97,7 @@ public class AmazonAppTestAll extends Base{
 
 	}
 	
-	@Test(dataProvider = "LoginUser",dataProviderClass = TestData.class, priority=4)
+	@Test(priority=4)
 	public void screenRotationCheck(String userID,String pwd ) throws IOException, InterruptedException {
 		
 		System.out.println("Current screen orientation Is : " +driver.getOrientation());

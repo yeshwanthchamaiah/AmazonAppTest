@@ -6,8 +6,7 @@
       <class name="com.addchart.demo.AmazonAppTestAll">
         <methods>
           <include name="changeCountrySetting"/>
-          <include name="screenRotationCheck" invocation-numbers="0"/>
-          <include name="doLogin" invocation-numbers="0"/>
+          <include name="screenRotationCheck"/>
           <include name="tearDown"/>
           <include name="addToCart"/>
           <include name="setUp"/>
